@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_filter :ensure_published, :only => 'show'
 
   def index
-    @posts = Post.all(:order => 'created_at desc')
+    @posts = Post.find( :all, :conditions=> {:published => true}, :order => 'created_at desc')
   end
 
   def show

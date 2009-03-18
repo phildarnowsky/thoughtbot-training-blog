@@ -5,16 +5,31 @@ class PostsControllerTest < ActionController::TestCase
 
   include PostsHelper
 
-  context 'on GET to index' do
+  context 'on GET to index on one pubbed n one not' do
     setup do
-      @post1 = Post.create({:title => "Post 1",
-                            :body => "Body 1",
-                            :created_at => 10.minutes.ago})
-      @post2 = Post.create({:title => "Post 2",
-                            :body => "Body 2",
-                            :created_at => 5.minutes.ago})
+      @post1 = Factory(:published_post)
+      @post2 = Factory(:unpublished_post)
       get :index
     end
+    
+    should "show only pubbed post" do
+      assert_equal [@post1], assigns(:posts)
+    end
+    
+  end # context
+  
+    context 'on GET to index on multple pubbed posts' do
+      setup do
+        @post1 = Factory(:post, :title => "Post 1",
+                                :body => "Body 1",
+                                :published => true,
+                                :created_at => 10.minutes.ago)
+        @post2 = Factory(:post, :title => "Post 2",
+                                :body => "Body 2",
+                                :published => true,
+                                :created_at => 5.minutes.ago)
+        get :index
+      end
 
     should_respond_with :success
     should_render_template :index
@@ -46,14 +61,13 @@ class PostsControllerTest < ActionController::TestCase
 
     should "show a link to create a new post" do
       assert_select 'a[href=?]', new_post_path
-    end
-  end
+    end  
+  end # context 'on GET to index'
 
   context "on GET to show for a published post" do
     setup do
-      @post = Post.create({:title => 'Title', :body => 'Body', :published => true})
-      @comment = @post.comments.create({:title => 'Comment Title',
-                                        :body  => 'Comment Body'})
+      @post = Factory(:post, :published => true)
+      @comment = Factory(:comment, :post => @post)
       get :show, :id => @post
     end
 
@@ -62,8 +76,8 @@ class PostsControllerTest < ActionController::TestCase
     should_assign_to :comment
 
     should "render the post" do
-      assert_select 'h2>a[href=?]', post_path(@post), :text => 'Title'
-      assert_select 'p', 'Body'
+      assert_select 'h2>a[href=?]', post_path(@post), :text => @post.title
+      assert_select 'p', @post.body
     end
 
     should "have a form to post a comment" do
@@ -75,14 +89,14 @@ class PostsControllerTest < ActionController::TestCase
     end
 
     should "display comments" do
-      assert_select 'h3', 'Comment Title'
-      assert_select 'p', 'Comment Body'
+      assert_select 'h3', @comment.title
+      assert_select 'p', @comment.body
     end
   end
 
   context "on GET to show for an unpublished post" do
     setup do
-      @post = Post.create({:title => 'Title', :body => 'Body', :published => false})
+      @post = Factory(:post, :published => false)
       get :show, :id => @post
     end
 
@@ -152,7 +166,7 @@ class PostsControllerTest < ActionController::TestCase
 
   context "on GET to edit" do
     setup do
-      @post = Post.create({:title => 'Title', :body => 'Body'})
+      @post = Factory(:post)
       get :edit, :id => @post
     end
 
@@ -173,7 +187,7 @@ class PostsControllerTest < ActionController::TestCase
 
   context 'on PUT to update with valid parameters' do
     setup do
-      @post = Post.create({:title => "Title", :body => "Body"})
+      @post = Factory(:post)
       @new_post_attributes = { :title => "New Title", :body => "New Body" }
       put :update, :id => @post, :post => @new_post_attributes
     end
@@ -189,7 +203,7 @@ class PostsControllerTest < ActionController::TestCase
 
   context 'on PUT to update with invalid parameters' do
     setup do
-      @post = Post.create({:title => "Title", :body => "Body"})
+      @post = Factory(:post)
       put :update, :id => @post, :post => {:title => nil, :body => nil}
     end
 
