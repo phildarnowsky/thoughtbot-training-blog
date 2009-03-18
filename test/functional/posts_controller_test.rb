@@ -28,6 +28,8 @@ class PostsControllerTest < ActionController::TestCase
                                 :body => "Body 2",
                                 :published => true,
                                 :created_at => 5.minutes.ago)
+        @post3 = Factory(:unpublished_post)
+        
         get :index
       end
 

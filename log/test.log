@@ -22206,3 +22206,2232 @@ Redirected to /posts
 Completed in 4ms (DB: 1) | 302 Found [http://test.host/posts/1?post%5Bbody%5D=New+Body&post%5Btitle%5D=New+Title]
   [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
   [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:41', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:33:41')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:41', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:38:41')[0m
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:41', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:43:41')[0m
+  [4;36;1mPost Create (0.2ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:41', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:41')[0m
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."published" = 't') [0m
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:41', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:42:41')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:41', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:41')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:41', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:33:41')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:41', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:38:41')[0m
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:41', 'title', 'body', 'f', '', '2009-03-18 20:43:41')[0m
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:41', 'title', 'body', 'f', 'Joe', '2009-03-18 20:43:41')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:43:43) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{"title"=>"title", "body"=>"body"}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:43:43', 'title', 'body', 1, '2009-03-18 20:43:43')[0m
+Redirected to /posts/1
+Completed in 8ms (DB: 1) | 302 Found [http://test.host/posts/1/comments?comment%5Bbody%5D=body&comment%5Btitle%5D=title]
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) ORDER BY comments.id DESC LIMIT 1[0m
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:43:43) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{"title"=>"title", "body"=>"body"}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:43:43', 'title', 'body', 1, '2009-03-18 20:43:43')[0m
+Redirected to /posts/1
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/posts/1/comments?comment%5Bbody%5D=body&comment%5Btitle%5D=title]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:43:43) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{"title"=>"title", "body"=>"body"}}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:43:43', 'title', 'body', 1, '2009-03-18 20:43:43')[0m
+Redirected to /posts/1
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts/1/comments?comment%5Bbody%5D=body&comment%5Btitle%5D=title]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:43:43) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.5ms)
+Rendered layouts/_flashes (0.2ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:43:43) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:43:43) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:43:43) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:43:43) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:43:43', 'C title', 'C body', 1, '2009-03-18 20:43:43')[0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2009-03-18 16:43:43) [DELETE]
+  Parameters: {"post_id"=>"1", "id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+  [4;36;1mComment Destroy (0.1ms)[0m   [0;1mDELETE FROM "comments" WHERE "id" = 1[0m
+Redirected to /posts/1
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/posts/1/comments/1]
+  [4;35;1mComment Exists (0.1ms)[0m   [0mSELECT "comments".id FROM "comments" WHERE ("comments"."id" = 1) LIMIT 1[0m
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:43:43', 'C title', 'C body', 1, '2009-03-18 20:43:43')[0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2009-03-18 16:43:43) [DELETE]
+  Parameters: {"post_id"=>"1", "id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+  [4;36;1mComment Destroy (0.1ms)[0m   [0;1mDELETE FROM "comments" WHERE "id" = 1[0m
+Redirected to /posts/1
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/posts/1/comments/1]
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:43", updated_at: "2009-03-18 20:43:43", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1/edit]
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:43", updated_at: "2009-03-18 20:43:43", author: nil, published: false>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/edit]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:43", updated_at: "2009-03-18 20:43:43", author: nil, published: false>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/edit]
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:43", updated_at: "2009-03-18 20:43:43", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/edit]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:33:43')[0m
+  [4;36;1mPost Create (0.2ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:38:43')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  [4;35;1mPost Load (0.9ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 2) | 200 OK [http://test.host/posts]
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:33:43')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:38:43')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 2) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:33:43')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:38:43')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  [4;35;1mPost Load (0.8ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 2, DB: 1) | 200 OK [http://test.host/posts]
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:33:43')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:38:43')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:33:43')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:38:43')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  [4;35;1mPost Load (1.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 2) | 200 OK [http://test.host/posts]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:33:43')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:38:43')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 2, DB: 1) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:33:43')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:38:43')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  [4;35;1mPost Load (1.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 2) | 200 OK [http://test.host/posts]
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:43:43')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.4ms)
+Rendered layouts/_flashes (0.2ms)
+Completed in 4ms (View: 2, DB: 1) | 200 OK [http://test.host/posts]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:43:43')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:43:43', 'C title', 'C body', 1, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:43", updated_at: "2009-03-18 20:43:43", author: nil, published: true>}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.5ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:43:43')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:43:43', 'C title', 'C body', 1, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:43", updated_at: "2009-03-18 20:43:43", author: nil, published: true>}
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.5ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.2ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:43:43')[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:43:43', 'C title', 'C body', 1, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:43", updated_at: "2009-03-18 20:43:43", author: nil, published: true>}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.5ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:43:43')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:43:43', 'C title', 'C body', 1, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:43", updated_at: "2009-03-18 20:43:43", author: nil, published: true>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:43:43')[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:43:43', 'C title', 'C body', 1, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:43", updated_at: "2009-03-18 20:43:43", author: nil, published: true>}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:43:43')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:43:43', 'C title', 'C body', 1, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:43", updated_at: "2009-03-18 20:43:43", author: nil, published: true>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:43:43')[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:43:43', 'C title', 'C body', 1, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:43", updated_at: "2009-03-18 20:43:43", author: nil, published: true>}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:43", updated_at: "2009-03-18 20:43:43", author: nil, published: false>}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Redirected to /posts
+Filter chain halted as [:ensure_published] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/posts/1]
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:43:43) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:43", updated_at: "2009-03-18 20:43:43", author: nil, published: false>}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Redirected to /posts
+Filter chain halted as [:ensure_published] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/posts/1]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:43:43) [POST]
+  Parameters: {"post"=>{}}
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.6ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://test.host/posts?]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:43:43) [POST]
+  Parameters: {"post"=>{}}
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.6ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://test.host/posts?]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:43:43) [POST]
+  Parameters: {"post"=>{}}
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.5ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://test.host/posts?]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:43:43) [POST]
+  Parameters: {"post"=>{}}
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.5ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://test.host/posts?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:43:43) [POST]
+  Parameters: {"post"=>{"title"=>"Test Title", "body"=>"Test Body"}}
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Test Title', 'Test Body', 'f', NULL, '2009-03-18 20:43:43')[0m
+Redirected to /posts
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/posts?post%5Bbody%5D=Test+Body&post%5Btitle%5D=Test+Title]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:43:43) [POST]
+  Parameters: {"post"=>{"title"=>"Test Title", "body"=>"Test Body"}}
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Test Title', 'Test Body', 'f', NULL, '2009-03-18 20:43:43')[0m
+Redirected to /posts
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts?post%5Bbody%5D=Test+Body&post%5Btitle%5D=Test+Title]
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" ORDER BY posts.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:43:43) [POST]
+  Parameters: {"post"=>{"title"=>"Test Title", "body"=>"Test Body"}}
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Test Title', 'Test Body', 'f', NULL, '2009-03-18 20:43:43')[0m
+Redirected to /posts
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts?post%5Bbody%5D=Test+Body&post%5Btitle%5D=Test+Title]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:43:43) [POST]
+  Parameters: {"post"=>{"title"=>"Test Title", "body"=>"Test Body"}}
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Test Title', 'Test Body', 'f', NULL, '2009-03-18 20:43:43')[0m
+Redirected to /posts
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/posts?post%5Bbody%5D=Test+Body&post%5Btitle%5D=Test+Title]
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:43:43) [PUT]
+  Parameters: {"post"=>{"title"=>nil, "body"=>nil}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:43", updated_at: "2009-03-18 20:43:43", author: nil, published: false>}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.8ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1?post%5Bbody%5D=&post%5Btitle%5D=]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:43:43) [PUT]
+  Parameters: {"post"=>{"title"=>nil, "body"=>nil}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:43", updated_at: "2009-03-18 20:43:43", author: nil, published: false>}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (2.6ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1?post%5Bbody%5D=&post%5Btitle%5D=]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:43:43) [PUT]
+  Parameters: {"post"=>{"title"=>nil, "body"=>nil}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:43", updated_at: "2009-03-18 20:43:43", author: nil, published: false>}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.8ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1?post%5Bbody%5D=&post%5Btitle%5D=]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:43', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:43')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:43:44) [PUT]
+  Parameters: {"post"=>{"title"=>"New Title", "body"=>"New Body"}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:43", updated_at: "2009-03-18 20:43:43", author: nil, published: false>}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mPost Update (0.5ms)[0m   [0;1mUPDATE "posts" SET "title" = 'New Title', "body" = 'New Body', "updated_at" = '2009-03-18 20:43:44' WHERE "id" = 1[0m
+Redirected to /posts
+Completed in 5ms (DB: 1) | 302 Found [http://test.host/posts/1?post%5Bbody%5D=New+Body&post%5Btitle%5D=New+Title]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:44', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:44')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:43:44) [PUT]
+  Parameters: {"post"=>{"title"=>"New Title", "body"=>"New Body"}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:44", updated_at: "2009-03-18 20:43:44", author: nil, published: false>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mPost Update (0.5ms)[0m   [0mUPDATE "posts" SET "title" = 'New Title', "body" = 'New Body', "updated_at" = '2009-03-18 20:43:44' WHERE "id" = 1[0m
+Redirected to /posts
+Completed in 6ms (DB: 1) | 302 Found [http://test.host/posts/1?post%5Bbody%5D=New+Body&post%5Btitle%5D=New+Title]
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:43:44', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:44')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:43:44) [PUT]
+  Parameters: {"post"=>{"title"=>"New Title", "body"=>"New Body"}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:43:44", updated_at: "2009-03-18 20:43:44", author: nil, published: false>}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mPost Update (0.5ms)[0m   [0;1mUPDATE "posts" SET "title" = 'New Title', "body" = 'New Body', "updated_at" = '2009-03-18 20:43:44' WHERE "id" = 1[0m
+Redirected to /posts
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/posts/1?post%5Bbody%5D=New+Body&post%5Btitle%5D=New+Title]
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:32', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:34:32')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:32', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:39:32')[0m
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:32', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:44:32')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:32', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:32')[0m
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."published" = 't') [0m
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:32', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:43:32')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:32', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:32')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:32', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:34:32')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:32', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:39:32')[0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at DESC[0m
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:32', 'title', 'body', 'f', '', '2009-03-18 20:44:32')[0m
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:32', 'title', 'body', 'f', 'Joe', '2009-03-18 20:44:32')[0m
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:44:35) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{"title"=>"title", "body"=>"body"}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:44:35', 'title', 'body', 1, '2009-03-18 20:44:35')[0m
+Redirected to /posts/1
+Completed in 8ms (DB: 1) | 302 Found [http://test.host/posts/1/comments?comment%5Bbody%5D=body&comment%5Btitle%5D=title]
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) ORDER BY comments.id DESC LIMIT 1[0m
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:44:35) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{"title"=>"title", "body"=>"body"}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:44:35', 'title', 'body', 1, '2009-03-18 20:44:35')[0m
+Redirected to /posts/1
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/posts/1/comments?comment%5Bbody%5D=body&comment%5Btitle%5D=title]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:44:35) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{"title"=>"title", "body"=>"body"}}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mComment Create (0.3ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:44:35', 'title', 'body', 1, '2009-03-18 20:44:35')[0m
+Redirected to /posts/1
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/posts/1/comments?comment%5Bbody%5D=body&comment%5Btitle%5D=title]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:44:35) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.5ms)
+Rendered layouts/_flashes (0.2ms)
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:44:35) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:44:35) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:44:35) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:44:35) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:44:35', 'C title', 'C body', 1, '2009-03-18 20:44:35')[0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2009-03-18 16:44:35) [DELETE]
+  Parameters: {"post_id"=>"1", "id"=>"1"}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+  [4;36;1mComment Destroy (0.2ms)[0m   [0;1mDELETE FROM "comments" WHERE "id" = 1[0m
+Redirected to /posts/1
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/posts/1/comments/1]
+  [4;35;1mComment Exists (0.1ms)[0m   [0mSELECT "comments".id FROM "comments" WHERE ("comments"."id" = 1) LIMIT 1[0m
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:44:35', 'C title', 'C body', 1, '2009-03-18 20:44:35')[0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2009-03-18 16:44:35) [DELETE]
+  Parameters: {"post_id"=>"1", "id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+  [4;36;1mComment Destroy (0.1ms)[0m   [0;1mDELETE FROM "comments" WHERE "id" = 1[0m
+Redirected to /posts/1
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/posts/1/comments/1]
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.2ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1/edit]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/edit]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/edit]
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/edit]
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:34:35')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:39:35')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  [4;35;1mPost Load (0.9ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/posts]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:34:35')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:39:35')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 2) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:34:35')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:39:35')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  [4;35;1mPost Load (0.8ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 2, DB: 1) | 200 OK [http://test.host/posts]
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:34:35')[0m
+  [4;35;1mPost Create (0.2ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:39:35')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  [4;36;1mPost Load (1.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 2) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:34:35')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:39:35')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  [4;35;1mPost Load (0.8ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 2, DB: 1) | 200 OK [http://test.host/posts]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:34:35')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:39:35')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  [4;36;1mPost Load (1.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 2) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:34:35')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:39:35')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  [4;35;1mPost Load (1.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 2) | 200 OK [http://test.host/posts]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:44:35')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.6ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 2, DB: 1) | 200 OK [http://test.host/posts]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.2ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:44:35')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:44:35', 'C title', 'C body', 1, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: true>}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:44:35')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:44:35', 'C title', 'C body', 1, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: true>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 8ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:44:35')[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:44:35', 'C title', 'C body', 1, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: true>}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:44:35')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:44:35', 'C title', 'C body', 1, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: true>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (0.9ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:44:35')[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:44:35', 'C title', 'C body', 1, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: true>}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:44:35')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:44:35', 'C title', 'C body', 1, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: true>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:44:35')[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:44:35', 'C title', 'C body', 1, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: true>}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.5ms)
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.2ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: false>}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Redirected to /posts
+Filter chain halted as [:ensure_published] rendered_or_redirected.
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/posts/1]
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:44:35) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: false>}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Redirected to /posts
+Filter chain halted as [:ensure_published] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/posts/1]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:44:35) [POST]
+  Parameters: {"post"=>{}}
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.7ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://test.host/posts?]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:44:35) [POST]
+  Parameters: {"post"=>{}}
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.6ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://test.host/posts?]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:44:35) [POST]
+  Parameters: {"post"=>{}}
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.6ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://test.host/posts?]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:44:35) [POST]
+  Parameters: {"post"=>{}}
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.6ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://test.host/posts?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:44:35) [POST]
+  Parameters: {"post"=>{"title"=>"Test Title", "body"=>"Test Body"}}
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Test Title', 'Test Body', 'f', NULL, '2009-03-18 20:44:35')[0m
+Redirected to /posts
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/posts?post%5Bbody%5D=Test+Body&post%5Btitle%5D=Test+Title]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:44:35) [POST]
+  Parameters: {"post"=>{"title"=>"Test Title", "body"=>"Test Body"}}
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Test Title', 'Test Body', 'f', NULL, '2009-03-18 20:44:35')[0m
+Redirected to /posts
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts?post%5Bbody%5D=Test+Body&post%5Btitle%5D=Test+Title]
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" ORDER BY posts.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:44:35) [POST]
+  Parameters: {"post"=>{"title"=>"Test Title", "body"=>"Test Body"}}
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Test Title', 'Test Body', 'f', NULL, '2009-03-18 20:44:35')[0m
+Redirected to /posts
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/posts?post%5Bbody%5D=Test+Body&post%5Btitle%5D=Test+Title]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:44:35) [POST]
+  Parameters: {"post"=>{"title"=>"Test Title", "body"=>"Test Body"}}
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Test Title', 'Test Body', 'f', NULL, '2009-03-18 20:44:35')[0m
+Redirected to /posts
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/posts?post%5Bbody%5D=Test+Body&post%5Btitle%5D=Test+Title]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:44:35) [PUT]
+  Parameters: {"post"=>{"title"=>nil, "body"=>nil}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: false>}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.7ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1?post%5Bbody%5D=&post%5Btitle%5D=]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:44:35) [PUT]
+  Parameters: {"post"=>{"title"=>nil, "body"=>nil}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: false>}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.8ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1?post%5Bbody%5D=&post%5Btitle%5D=]
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:44:35) [PUT]
+  Parameters: {"post"=>{"title"=>nil, "body"=>nil}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: false>}
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (2.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1?post%5Bbody%5D=&post%5Btitle%5D=]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:44:35) [PUT]
+  Parameters: {"post"=>{"title"=>"New Title", "body"=>"New Body"}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: false>}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mPost Update (0.4ms)[0m   [0;1mUPDATE "posts" SET "title" = 'New Title', "body" = 'New Body', "updated_at" = '2009-03-18 20:44:35' WHERE "id" = 1[0m
+Redirected to /posts
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts/1?post%5Bbody%5D=New+Body&post%5Btitle%5D=New+Title]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:44:35) [PUT]
+  Parameters: {"post"=>{"title"=>"New Title", "body"=>"New Body"}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mPost Update (0.4ms)[0m   [0mUPDATE "posts" SET "title" = 'New Title', "body" = 'New Body', "updated_at" = '2009-03-18 20:44:35' WHERE "id" = 1[0m
+Redirected to /posts
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts/1?post%5Bbody%5D=New+Body&post%5Btitle%5D=New+Title]
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:44:35', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:35')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:44:35) [PUT]
+  Parameters: {"post"=>{"title"=>"New Title", "body"=>"New Body"}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:44:35", updated_at: "2009-03-18 20:44:35", author: nil, published: false>}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mPost Update (0.4ms)[0m   [0;1mUPDATE "posts" SET "title" = 'New Title', "body" = 'New Body', "updated_at" = '2009-03-18 20:44:35' WHERE "id" = 1[0m
+Redirected to /posts
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts/1?post%5Bbody%5D=New+Body&post%5Btitle%5D=New+Title]
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:54', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:38:54')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:54', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:43:54')[0m
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:54', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:48:54')[0m
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:54', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:54')[0m
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."published" = 't') [0m
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:54', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:47:54')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:54', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:54')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:54', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:38:54')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:54', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:43:54')[0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at DESC[0m
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:54', 'title', 'body', 'f', '', '2009-03-18 20:48:54')[0m
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:54', 'title', 'body', 'f', 'Joe', '2009-03-18 20:48:54')[0m
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:48:56) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{"title"=>"title", "body"=>"body"}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:48:56', 'title', 'body', 1, '2009-03-18 20:48:56')[0m
+Redirected to /posts/1
+Completed in 7ms (DB: 1) | 302 Found [http://test.host/posts/1/comments?comment%5Bbody%5D=body&comment%5Btitle%5D=title]
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) ORDER BY comments.id DESC LIMIT 1[0m
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:48:56) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{"title"=>"title", "body"=>"body"}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:48:56', 'title', 'body', 1, '2009-03-18 20:48:56')[0m
+Redirected to /posts/1
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/posts/1/comments?comment%5Bbody%5D=body&comment%5Btitle%5D=title]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:48:56) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{"title"=>"title", "body"=>"body"}}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:48:56', 'title', 'body', 1, '2009-03-18 20:48:56')[0m
+Redirected to /posts/1
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts/1/comments?comment%5Bbody%5D=body&comment%5Btitle%5D=title]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:48:56) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.5ms)
+Rendered layouts/_flashes (0.2ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:48:56) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.2ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:48:56) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.2ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:48:56) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:48:56) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:48:56', 'C title', 'C body', 1, '2009-03-18 20:48:56')[0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2009-03-18 16:48:56) [DELETE]
+  Parameters: {"post_id"=>"1", "id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+  [4;36;1mComment Destroy (0.1ms)[0m   [0;1mDELETE FROM "comments" WHERE "id" = 1[0m
+Redirected to /posts/1
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/posts/1/comments/1]
+  [4;35;1mComment Exists (0.1ms)[0m   [0mSELECT "comments".id FROM "comments" WHERE ("comments"."id" = 1) LIMIT 1[0m
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:48:56', 'C title', 'C body', 1, '2009-03-18 20:48:56')[0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2009-03-18 16:48:56) [DELETE]
+  Parameters: {"post_id"=>"1", "id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+  [4;36;1mComment Destroy (0.1ms)[0m   [0;1mDELETE FROM "comments" WHERE "id" = 1[0m
+Redirected to /posts/1
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/posts/1/comments/1]
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:56", updated_at: "2009-03-18 20:48:56", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.2ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1/edit]
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:56", updated_at: "2009-03-18 20:48:56", author: nil, published: false>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/edit]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:56", updated_at: "2009-03-18 20:48:56", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/edit]
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:56", updated_at: "2009-03-18 20:48:56", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/edit]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:38:56')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:43:56')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 2) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:38:56')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:43:56')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 2) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:38:56')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:43:56')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 2) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:38:56')[0m
+  [4;36;1mPost Create (0.2ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:43:56')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.4ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 2) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:38:56')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:43:56')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 2) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:38:56')[0m
+  [4;36;1mPost Create (0.2ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:43:56')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 2, DB: 2) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:38:56')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:43:56')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  [4;36;1mPost Load (1.1ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 2) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:48:56')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at desc[0m
+Rendering template within layouts/application
+Rendering posts/index
+Rendered posts/_post (0.4ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 2, DB: 2) | 200 OK [http://test.host/posts]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:48:56')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:48:56', 'C title', 'C body', 1, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:56", updated_at: "2009-03-18 20:48:56", author: nil, published: true>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.5ms)
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (0.9ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:48:56')[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:48:56', 'C title', 'C body', 1, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:56", updated_at: "2009-03-18 20:48:56", author: nil, published: true>}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:48:56')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:48:56', 'C title', 'C body', 1, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:56", updated_at: "2009-03-18 20:48:56", author: nil, published: true>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:48:56')[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:48:56', 'C title', 'C body', 1, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:56", updated_at: "2009-03-18 20:48:56", author: nil, published: true>}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:48:56')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:48:56', 'C title', 'C body', 1, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:56", updated_at: "2009-03-18 20:48:56", author: nil, published: true>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:48:56')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:48:56', 'C title', 'C body', 1, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:56", updated_at: "2009-03-18 20:48:56", author: nil, published: true>}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.3ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:48:56')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:48:56', 'C title', 'C body', 1, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:56", updated_at: "2009-03-18 20:48:56", author: nil, published: true>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.5ms)
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:56", updated_at: "2009-03-18 20:48:56", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Redirected to /posts
+Filter chain halted as [:ensure_published] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/posts/1]
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:48:56) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:56", updated_at: "2009-03-18 20:48:56", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Redirected to /posts
+Filter chain halted as [:ensure_published] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/posts/1]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:48:56) [POST]
+  Parameters: {"post"=>{}}
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.5ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://test.host/posts?]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:48:56) [POST]
+  Parameters: {"post"=>{}}
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.6ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://test.host/posts?]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:48:56) [POST]
+  Parameters: {"post"=>{}}
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.5ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://test.host/posts?]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:48:56) [POST]
+  Parameters: {"post"=>{}}
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.6ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://test.host/posts?]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:48:56) [POST]
+  Parameters: {"post"=>{"title"=>"Test Title", "body"=>"Test Body"}}
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Test Title', 'Test Body', 'f', NULL, '2009-03-18 20:48:56')[0m
+Redirected to /posts
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/posts?post%5Bbody%5D=Test+Body&post%5Btitle%5D=Test+Title]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:48:56) [POST]
+  Parameters: {"post"=>{"title"=>"Test Title", "body"=>"Test Body"}}
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Test Title', 'Test Body', 'f', NULL, '2009-03-18 20:48:56')[0m
+Redirected to /posts
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts?post%5Bbody%5D=Test+Body&post%5Btitle%5D=Test+Title]
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY posts.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:48:56) [POST]
+  Parameters: {"post"=>{"title"=>"Test Title", "body"=>"Test Body"}}
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Test Title', 'Test Body', 'f', NULL, '2009-03-18 20:48:56')[0m
+Redirected to /posts
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts?post%5Bbody%5D=Test+Body&post%5Btitle%5D=Test+Title]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:48:56) [POST]
+  Parameters: {"post"=>{"title"=>"Test Title", "body"=>"Test Body"}}
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Test Title', 'Test Body', 'f', NULL, '2009-03-18 20:48:56')[0m
+Redirected to /posts
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts?post%5Bbody%5D=Test+Body&post%5Btitle%5D=Test+Title]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:48:56) [PUT]
+  Parameters: {"post"=>{"title"=>nil, "body"=>nil}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:56", updated_at: "2009-03-18 20:48:56", author: nil, published: false>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.7ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1?post%5Bbody%5D=&post%5Btitle%5D=]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:48:56) [PUT]
+  Parameters: {"post"=>{"title"=>nil, "body"=>nil}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:56", updated_at: "2009-03-18 20:48:56", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.8ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1?post%5Bbody%5D=&post%5Btitle%5D=]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:56', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:56')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:48:56) [PUT]
+  Parameters: {"post"=>{"title"=>nil, "body"=>nil}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:56", updated_at: "2009-03-18 20:48:56", author: nil, published: false>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.9ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1?post%5Bbody%5D=&post%5Btitle%5D=]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:57', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:57')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:48:57) [PUT]
+  Parameters: {"post"=>{"title"=>"New Title", "body"=>"New Body"}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:57", updated_at: "2009-03-18 20:48:57", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mPost Update (0.4ms)[0m   [0mUPDATE "posts" SET "title" = 'New Title', "body" = 'New Body', "updated_at" = '2009-03-18 20:48:57' WHERE "id" = 1[0m
+Redirected to /posts
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts/1?post%5Bbody%5D=New+Body&post%5Btitle%5D=New+Title]
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:57', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:57')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:48:57) [PUT]
+  Parameters: {"post"=>{"title"=>"New Title", "body"=>"New Body"}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:57", updated_at: "2009-03-18 20:48:57", author: nil, published: false>}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mPost Update (0.4ms)[0m   [0;1mUPDATE "posts" SET "title" = 'New Title', "body" = 'New Body', "updated_at" = '2009-03-18 20:48:57' WHERE "id" = 1[0m
+Redirected to /posts
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts/1?post%5Bbody%5D=New+Body&post%5Btitle%5D=New+Title]
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:48:57', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:48:57')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:48:57) [PUT]
+  Parameters: {"post"=>{"title"=>"New Title", "body"=>"New Body"}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:48:57", updated_at: "2009-03-18 20:48:57", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mPost Update (0.6ms)[0m   [0mUPDATE "posts" SET "title" = 'New Title', "body" = 'New Body', "updated_at" = '2009-03-18 20:48:57' WHERE "id" = 1[0m
+Redirected to /posts
+Completed in 113ms (DB: 1) | 302 Found [http://test.host/posts/1?post%5Bbody%5D=New+Body&post%5Btitle%5D=New+Title]
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:34', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:39:34')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:34', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:44:34')[0m
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC[0m
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:34', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:49:34')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:34', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:34')[0m
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."published" = 't') [0m
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:34', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:48:34')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:34', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:34')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:34', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:39:34')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:34', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:44:34')[0m
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at DESC[0m
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:34', 'title', 'body', 'f', '', '2009-03-18 20:49:34')[0m
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:34', 'title', 'body', 'f', 'Joe', '2009-03-18 20:49:34')[0m
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:36', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:36')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:49:36) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{"title"=>"title", "body"=>"body"}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:49:36', 'title', 'body', 1, '2009-03-18 20:49:36')[0m
+Redirected to /posts/1
+Completed in 8ms (DB: 1) | 302 Found [http://test.host/posts/1/comments?comment%5Bbody%5D=body&comment%5Btitle%5D=title]
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) ORDER BY comments.id DESC LIMIT 1[0m
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:36', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:36')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:49:36) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{"title"=>"title", "body"=>"body"}}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:49:36', 'title', 'body', 1, '2009-03-18 20:49:36')[0m
+Redirected to /posts/1
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/posts/1/comments?comment%5Bbody%5D=body&comment%5Btitle%5D=title]
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:36', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:36')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:49:36) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{"title"=>"title", "body"=>"body"}}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:49:36', 'title', 'body', 1, '2009-03-18 20:49:36')[0m
+Redirected to /posts/1
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts/1/comments?comment%5Bbody%5D=body&comment%5Btitle%5D=title]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:36', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:36')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:49:36) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.5ms)
+Rendered layouts/_flashes (0.2ms)
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:36', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:36')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:49:36) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:36', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:36')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:49:36) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:36', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:36')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:49:36) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:36', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:36')[0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-03-18 16:49:36) [POST]
+  Parameters: {"post_id"=>"1", "comment"=>{}}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering comments/new
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/comments?]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:36', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:36')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:49:36', 'C title', 'C body', 1, '2009-03-18 20:49:36')[0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2009-03-18 16:49:36) [DELETE]
+  Parameters: {"post_id"=>"1", "id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+  [4;36;1mComment Destroy (0.1ms)[0m   [0;1mDELETE FROM "comments" WHERE "id" = 1[0m
+Redirected to /posts/1
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/posts/1/comments/1]
+  [4;35;1mComment Exists (0.1ms)[0m   [0mSELECT "comments".id FROM "comments" WHERE ("comments"."id" = 1) LIMIT 1[0m
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:36', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:36')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:49:36', 'C title', 'C body', 1, '2009-03-18 20:49:36')[0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2009-03-18 16:49:36) [DELETE]
+  Parameters: {"post_id"=>"1", "id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mComment Load (0.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments"."id" = 1) [0m
+  [4;36;1mComment Destroy (0.1ms)[0m   [0;1mDELETE FROM "comments" WHERE "id" = 1[0m
+Redirected to /posts/1
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/posts/1/comments/1]
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:36', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:36')[0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-03-18 16:49:36) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:36", updated_at: "2009-03-18 20:49:36", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.2ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1/edit]
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:36', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:36')[0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-03-18 16:49:36) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:36", updated_at: "2009-03-18 20:49:36", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/edit]
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:36', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:36')[0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-03-18 16:49:36) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:36", updated_at: "2009-03-18 20:49:36", author: nil, published: false>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/edit]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:36', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:36')[0m
+
+
+Processing PostsController#edit (for 0.0.0.0 at 2009-03-18 16:49:36) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:36", updated_at: "2009-03-18 20:49:36", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://test.host/posts/1/edit]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:39:36')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:44:37')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at DESC[0m
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 5, DB: 1) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:39:37')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:44:37')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at DESC[0m
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 5, DB: 1) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:39:37')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:44:37')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at DESC[0m
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 5, DB: 1) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:39:37')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:44:37')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at DESC[0m
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 4, DB: 1) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.3ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:39:37')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:44:37')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mPost Load (0.9ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at DESC[0m
+Rendered posts/_post (0.5ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 4, DB: 1) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:39:37')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:44:37')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at DESC[0m
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 5, DB: 1) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post 1', 'Body 1', 't', NULL, '2009-03-18 20:39:37')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post 2', 'Body 2', 't', NULL, '2009-03-18 20:44:37')[0m
+  [4;35;1mPost Create (0.1ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at DESC[0m
+Rendered posts/_post (0.4ms)
+Rendered posts/_post (0.3ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 6, DB: 1) | 200 OK [http://test.host/posts]
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:49:37')[0m
+  [4;36;1mPost Create (0.1ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#index (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mPost Load (1.1ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."published" = 't') ORDER BY created_at DESC[0m
+Rendered posts/_post (0.5ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 5, DB: 1) | 200 OK [http://test.host/posts]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.5ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 4ms (View: 4, DB: 0) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.2ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+
+
+Processing PostsController#new (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/posts/new]
+  [4;36;1mPost Create (0.5ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:49:37')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:49:37', 'C title', 'C body', 1, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:37", updated_at: "2009-03-18 20:49:37", author: nil, published: true>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (0.9ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:49:37')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:49:37', 'C title', 'C body', 1, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:37", updated_at: "2009-03-18 20:49:37", author: nil, published: true>}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:49:37')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:49:37', 'C title', 'C body', 1, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:37", updated_at: "2009-03-18 20:49:37", author: nil, published: true>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:49:37')[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:49:37', 'C title', 'C body', 1, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:37", updated_at: "2009-03-18 20:49:37", author: nil, published: true>}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:49:37')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:49:37', 'C title', 'C body', 1, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:37", updated_at: "2009-03-18 20:49:37", author: nil, published: true>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.1ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:49:37')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:49:37', 'C title', 'C body', 1, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:37", updated_at: "2009-03-18 20:49:37", author: nil, published: true>}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 't', NULL, '2009-03-18 20:49:37')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "title", "body", "post_id", "created_at") VALUES('2009-03-18 20:49:37', 'C title', 'C body', 1, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:37", updated_at: "2009-03-18 20:49:37", author: nil, published: true>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/show
+Rendered posts/_post (0.4ms)
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".post_id = 1) [0m
+Rendered comments/_form (1.0ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://test.host/posts/1]
+  [4;35;1mPost Create (0.6ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:37", updated_at: "2009-03-18 20:49:37", author: nil, published: false>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Redirected to /posts
+Filter chain halted as [:ensure_published] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/posts/1]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#show (for 0.0.0.0 at 2009-03-18 16:49:37) [GET]
+  Parameters: {"id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:37", updated_at: "2009-03-18 20:49:37", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Redirected to /posts
+Filter chain halted as [:ensure_published] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://test.host/posts/1]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:49:37) [POST]
+  Parameters: {"post"=>{}}
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.6ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://test.host/posts?]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:49:37) [POST]
+  Parameters: {"post"=>{}}
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.6ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://test.host/posts?]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:49:37) [POST]
+  Parameters: {"post"=>{}}
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.6ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://test.host/posts?]
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:49:37) [POST]
+  Parameters: {"post"=>{}}
+Rendering template within layouts/application
+Rendering posts/new
+Rendered posts/_form (1.6ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://test.host/posts?]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:49:37) [POST]
+  Parameters: {"post"=>{"title"=>"Test Title", "body"=>"Test Body"}}
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Test Title', 'Test Body', 'f', NULL, '2009-03-18 20:49:37')[0m
+Redirected to /posts
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/posts?post%5Bbody%5D=Test+Body&post%5Btitle%5D=Test+Title]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:49:37) [POST]
+  Parameters: {"post"=>{"title"=>"Test Title", "body"=>"Test Body"}}
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Test Title', 'Test Body', 'f', NULL, '2009-03-18 20:49:37')[0m
+Redirected to /posts
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts?post%5Bbody%5D=Test+Body&post%5Btitle%5D=Test+Title]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" ORDER BY posts.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:49:37) [POST]
+  Parameters: {"post"=>{"title"=>"Test Title", "body"=>"Test Body"}}
+  [4;36;1mPost Create (0.3ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Test Title', 'Test Body', 'f', NULL, '2009-03-18 20:49:37')[0m
+Redirected to /posts
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts?post%5Bbody%5D=Test+Body&post%5Btitle%5D=Test+Title]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "posts" [0m
+
+
+Processing PostsController#create (for 0.0.0.0 at 2009-03-18 16:49:37) [POST]
+  Parameters: {"post"=>{"title"=>"Test Title", "body"=>"Test Body"}}
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Test Title', 'Test Body', 'f', NULL, '2009-03-18 20:49:37')[0m
+Redirected to /posts
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/posts?post%5Bbody%5D=Test+Body&post%5Btitle%5D=Test+Title]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:49:37) [PUT]
+  Parameters: {"post"=>{"title"=>nil, "body"=>nil}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:37", updated_at: "2009-03-18 20:49:37", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.8ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1?post%5Bbody%5D=&post%5Btitle%5D=]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:49:37) [PUT]
+  Parameters: {"post"=>{"title"=>nil, "body"=>nil}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:37", updated_at: "2009-03-18 20:49:37", author: nil, published: false>}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.8ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 7ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1?post%5Bbody%5D=&post%5Btitle%5D=]
+  [4;35;1mPost Create (0.5ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:49:37) [PUT]
+  Parameters: {"post"=>{"title"=>nil, "body"=>nil}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:37", updated_at: "2009-03-18 20:49:37", author: nil, published: false>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering posts/edit
+Rendered posts/_form (1.8ms)
+Rendered layouts/_flashes (0.1ms)
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://test.host/posts/1?post%5Bbody%5D=&post%5Btitle%5D=]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:49:37) [PUT]
+  Parameters: {"post"=>{"title"=>"New Title", "body"=>"New Body"}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:37", updated_at: "2009-03-18 20:49:37", author: nil, published: false>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mPost Update (0.6ms)[0m   [0mUPDATE "posts" SET "title" = 'New Title', "body" = 'New Body', "updated_at" = '2009-03-18 20:49:37' WHERE "id" = 1[0m
+Redirected to /posts
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/posts/1?post%5Bbody%5D=New+Body&post%5Btitle%5D=New+Title]
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:49:37) [PUT]
+  Parameters: {"post"=>{"title"=>"New Title", "body"=>"New Body"}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:37", updated_at: "2009-03-18 20:49:37", author: nil, published: false>}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;36;1mPost Update (0.5ms)[0m   [0;1mUPDATE "posts" SET "title" = 'New Title', "body" = 'New Body', "updated_at" = '2009-03-18 20:49:37' WHERE "id" = 1[0m
+Redirected to /posts
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/posts/1?post%5Bbody%5D=New+Body&post%5Btitle%5D=New+Title]
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "published", "author", "created_at") VALUES('2009-03-18 20:49:37', 'Post title', 'Hi mom!', 'f', NULL, '2009-03-18 20:49:37')[0m
+
+
+Processing PostsController#update (for 0.0.0.0 at 2009-03-18 16:49:37) [PUT]
+  Parameters: {"post"=>{"title"=>"New Title", "body"=>"New Body"}, "id"=>#<Post id: 1, title: "Post title", body: "Hi mom!", created_at: "2009-03-18 20:49:37", updated_at: "2009-03-18 20:49:37", author: nil, published: false>}
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mPost Update (0.5ms)[0m   [0mUPDATE "posts" SET "title" = 'New Title', "body" = 'New Body', "updated_at" = '2009-03-18 20:49:37' WHERE "id" = 1[0m
+Redirected to /posts
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/posts/1?post%5Bbody%5D=New+Body&post%5Btitle%5D=New+Title]
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
