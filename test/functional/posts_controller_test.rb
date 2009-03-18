@@ -18,7 +18,7 @@ class PostsControllerTest < ActionController::TestCase
     
   end # context
   
-    context 'on GET to index on multple pubbed posts' do
+  context 'on GET to index on multple pubbed posts' do
       setup do
         @post1 = Factory(:post, :title => "Post 1",
                                 :body => "Body 1",
@@ -91,6 +91,15 @@ class PostsControllerTest < ActionController::TestCase
     should "display comments" do
       assert_select 'h3', @comment.title
       assert_select 'p', @comment.body
+    end
+    
+    should "have a button to delete a comment" do
+      assert_select 'div[id=?]', "comment_#{@comment.id}" do
+        assert_select 'form[action=?]', post_comment_path(@comment) do
+          assert_select 'input[type=hidden][name=_method][value=delete]'
+          assert_select 'input[type=submit]'
+        end
+      end
     end
   end
 

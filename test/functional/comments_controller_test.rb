@@ -41,4 +41,18 @@ class CommentsControllerTest < ActionController::TestCase
       assert_select '#errorExplanation'
     end
   end
+  
+  context "on POST to delete with a post ID and the hidden method field set" do
+    setup do
+      @post= Factory(:post)
+      @comment= Factory(:comment, :post => @post)
+      delete :destroy, :post_id => @post.id, :id => @comment.id
+    end
+    
+    should_redirect_to("the associated post") {post_path(@post.id)}
+    
+    should "destroy the comment" do
+      assert ! Comment.exists?(:id => @comment.id)
+    end
+  end
 end

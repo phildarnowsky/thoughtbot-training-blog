@@ -1,7 +1,12 @@
 <%= render :partial => 'post', :locals => { :post => @post } %>
 <% @post.comments.each do |comment| %>
+  <div id="comment_<%= comment.id%>">
   <h3><%=h comment.title %></h3>
+  <% form_for comment, :url => post_comment_path(comment), :html => {:method => :delete} do |f|%>
+	<%= f.submit "Delete This Comment" %>
+	<% end %>
   <p><%=h comment.body %></p>
+  </div>
 <% end %>
 <%= render :partial => 'comments/form',
            :locals  => { :post => @post, :comment => @comment } %>
